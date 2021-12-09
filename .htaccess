@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteRule ^verify/([0-9a-zA-Z]+)+$ verify.php?id=$1
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^((.)+)$ $1.php [NC,L]
+
+RewriteRule ^about about_us.php [NC,L]
+RewriteRule ^contact contact_us.php [NC,L]
+#RewriteRule ^delivery delivery_boy.php [NC,L]
+
+
+#http://localhost/phpprojects/foodgood/shop/-4//
